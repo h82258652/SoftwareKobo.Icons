@@ -1,4 +1,5 @@
-﻿using SoftwareKobo.Icons.FontAwesome;
+﻿using SoftwareKobo.Icons.Dashicons;
+using SoftwareKobo.Icons.FontAwesome;
 using SoftwareKobo.Icons.MaterialIcons;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,16 @@ namespace Demo
             this.InitializeComponent();
             FontAwesomeGridView.ItemsSource = Enum.GetValues(typeof(FontAwesomeSymbol)).Cast<FontAwesomeSymbol>();
             MaterialIconsGridView.ItemsSource = Enum.GetValues(typeof(MaterialSymbol)).Cast<MaterialSymbol>();
+            DashiconsGridView.ItemsSource = Enum.GetValues(typeof(DashSymbol)).Cast<DashSymbol>();
+        }
+
+        private void DashiconsGridView_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var item = e.AddedItems.FirstOrDefault();
+            if (item != null)
+            {
+                TextBlock.Text = item.ToString();
+            }
         }
     }
 }

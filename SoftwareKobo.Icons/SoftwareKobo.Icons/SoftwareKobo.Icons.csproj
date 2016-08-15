@@ -106,10 +106,13 @@
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <Content Include="Assets\Fonts\FontAwesome.otf" />
     <Content Include="Assets\Fonts\MaterialIcons-Regular.ttf" />
+    <Content Include="Assets\Fonts\dashicons.ttf" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="Dashicons\DashIcon.cs" />
+    <Compile Include="Dashicons\DashSymbol.cs" />
     <Compile Include="FontAwesome\FontAwesomeIcon.cs" />
     <Compile Include="FontAwesome\FontAwesomeSymbol.cs" />
     <Compile Include="MaterialIcons\MaterialIcon.cs" />

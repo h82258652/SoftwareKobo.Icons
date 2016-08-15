@@ -6,11 +6,13 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:fontAwesome="using:SoftwareKobo.Icons.FontAwesome"
       xmlns:materialIcons="using:SoftwareKobo.Icons.MaterialIcons"
+      xmlns:dashicons="using:SoftwareKobo.Icons.Dashicons"
       mc:Ignorable="d">
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Pivot>
             <PivotItem Header="FontAwesome">
-                <GridView x:Name="FontAwesomeGridView">
+                <GridView x:Name="FontAwesomeGridView"
+                          SelectionChanged="DashiconsGridView_OnSelectionChanged">
                     <GridView.ItemTemplate>
                         <DataTemplate>
                             <fontAwesome:FontAwesomeIcon Symbol="{Binding}"></fontAwesome:FontAwesomeIcon>
@@ -19,7 +21,8 @@
                 </GridView>
             </PivotItem>
             <PivotItem Header="MaterialIcons">
-                <GridView x:Name="MaterialIconsGridView">
+                <GridView x:Name="MaterialIconsGridView"
+                          SelectionChanged="DashiconsGridView_OnSelectionChanged">
                     <GridView.ItemTemplate>
                         <DataTemplate>
                             <materialIcons:MaterialIcon Symbol="{Binding}"></materialIcons:MaterialIcon>
@@ -27,6 +30,19 @@
                     </GridView.ItemTemplate>
                 </GridView>
             </PivotItem>
+            <PivotItem Header="Dashicons">
+                <GridView x:Name="DashiconsGridView"
+                          SelectionChanged="DashiconsGridView_OnSelectionChanged">
+                    <GridView.ItemTemplate>
+                        <DataTemplate>
+                            <dashicons:DashIcon Symbol="{Binding}"></dashicons:DashIcon>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+            </PivotItem>
         </Pivot>
+        <TextBlock HorizontalAlignment="Right"
+                   VerticalAlignment="Bottom"
+                   x:Name="TextBlock"></TextBlock>
     </Grid>
 </Page>

@@ -8,7 +8,7 @@ namespace SoftwareKobo.Icons.MaterialIcons
     {
         public static readonly DependencyProperty SymbolProperty = DependencyProperty.Register(nameof(Symbol), typeof(MaterialSymbol), typeof(MaterialIcon), new PropertyMetadata(default(MaterialSymbol), SymbolChanged));
 
-        private static readonly FontFamily MaterialIconFontFamily = new FontFamily(Constants.MaterialIconFamilyName);
+        private static readonly FontFamily MaterialIconFontFamily = new FontFamily(Constants.MaterialIconsFamilyName);
 
         public MaterialIcon()
         {
