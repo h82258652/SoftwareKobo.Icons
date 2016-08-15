@@ -24,6 +24,7 @@ namespace FontAwesomeSymbolGenerator
             StringBuilder builder = new StringBuilder();
             builder.AppendLine("public enum FontAwesomeSymbol");
             builder.AppendLine("{");
+            builder.AppendLine("None = 0x0000,");
 
             Dictionary<string, int> dic = new Dictionary<string, int>();
 

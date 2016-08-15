@@ -105,12 +105,15 @@
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <Content Include="Assets\Fonts\FontAwesome.otf" />
+    <Content Include="Assets\Fonts\MaterialIcons-Regular.ttf" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="FontAwesome\FontAwesomeIcon.cs" />
     <Compile Include="FontAwesome\FontAwesomeSymbol.cs" />
+    <Compile Include="MaterialIcons\MaterialIcon.cs" />
+    <Compile Include="MaterialIcons\MaterialSymbol.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\SoftwareKobo.Icons.rd.xml" />
   </ItemGroup>

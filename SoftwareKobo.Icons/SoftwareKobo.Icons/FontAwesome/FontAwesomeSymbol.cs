@@ -2,6 +2,7 @@
 {
     public enum FontAwesomeSymbol
     {
+        None = 0x0000,
         Glass = 0xf000,
         Music = 0xf001,
         Search = 0xf002,

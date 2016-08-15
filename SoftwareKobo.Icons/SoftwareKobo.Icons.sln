@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FontAwesomeSymbolGenerator"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{D101E299-10FA-4891-AE38-8616B5A6B0D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialSymbolGenerator", "MaterialSymbolGenerator\MaterialSymbolGenerator.csproj", "{B4A4621C-4573-45F9-BD80-976CB23BDBC2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,6 +56,8 @@ Global
 		{5BB4D822-DF54-4B30-847D-33B6B760D812}.Release|x86.ActiveCfg = Release|Any CPU
 		{5BB4D822-DF54-4B30-847D-33B6B760D812}.Release|x86.Build.0 = Release|Any CPU
 		{D101E299-10FA-4891-AE38-8616B5A6B0D2}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{D101E299-10FA-4891-AE38-8616B5A6B0D2}.Debug|Any CPU.Build.0 = Debug|x86
+		{D101E299-10FA-4891-AE38-8616B5A6B0D2}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{D101E299-10FA-4891-AE38-8616B5A6B0D2}.Debug|ARM.ActiveCfg = Debug|ARM
 		{D101E299-10FA-4891-AE38-8616B5A6B0D2}.Debug|ARM.Build.0 = Debug|ARM
 		{D101E299-10FA-4891-AE38-8616B5A6B0D2}.Debug|ARM.Deploy.0 = Debug|ARM
@@ -73,6 +77,22 @@ Global
 		{D101E299-10FA-4891-AE38-8616B5A6B0D2}.Release|x86.ActiveCfg = Release|x86
 		{D101E299-10FA-4891-AE38-8616B5A6B0D2}.Release|x86.Build.0 = Release|x86
 		{D101E299-10FA-4891-AE38-8616B5A6B0D2}.Release|x86.Deploy.0 = Release|x86
+		{B4A4621C-4573-45F9-BD80-976CB23BDBC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4A4621C-4573-45F9-BD80-976CB23BDBC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4A4621C-4573-45F9-BD80-976CB23BDBC2}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{B4A4621C-4573-45F9-BD80-976CB23BDBC2}.Debug|ARM.Build.0 = Debug|Any CPU
+		{B4A4621C-4573-45F9-BD80-976CB23BDBC2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B4A4621C-4573-45F9-BD80-976CB23BDBC2}.Debug|x64.Build.0 = Debug|Any CPU
+		{B4A4621C-4573-45F9-BD80-976CB23BDBC2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B4A4621C-4573-45F9-BD80-976CB23BDBC2}.Debug|x86.Build.0 = Debug|Any CPU
+		{B4A4621C-4573-45F9-BD80-976CB23BDBC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4A4621C-4573-45F9-BD80-976CB23BDBC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4A4621C-4573-45F9-BD80-976CB23BDBC2}.Release|ARM.ActiveCfg = Release|Any CPU
+		{B4A4621C-4573-45F9-BD80-976CB23BDBC2}.Release|ARM.Build.0 = Release|Any CPU
+		{B4A4621C-4573-45F9-BD80-976CB23BDBC2}.Release|x64.ActiveCfg = Release|Any CPU
+		{B4A4621C-4573-45F9-BD80-976CB23BDBC2}.Release|x64.Build.0 = Release|Any CPU
+		{B4A4621C-4573-45F9-BD80-976CB23BDBC2}.Release|x86.ActiveCfg = Release|Any CPU
+		{B4A4621C-4573-45F9-BD80-976CB23BDBC2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

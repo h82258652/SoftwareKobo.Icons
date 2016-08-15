@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SoftwareKobo.Icons.FontAwesome;
+using SoftwareKobo.Icons.MaterialIcons;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +27,8 @@ namespace Demo
         public MainPage()
         {
             this.InitializeComponent();
+            FontAwesomeGridView.ItemsSource = Enum.GetValues(typeof(FontAwesomeSymbol)).Cast<FontAwesomeSymbol>();
+            MaterialIconsGridView.ItemsSource = Enum.GetValues(typeof(MaterialSymbol)).Cast<MaterialSymbol>();
         }
     }
 }

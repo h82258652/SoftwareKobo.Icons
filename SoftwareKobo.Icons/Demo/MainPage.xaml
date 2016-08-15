@@ -5,8 +5,28 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:fontAwesome="using:SoftwareKobo.Icons.FontAwesome"
+      xmlns:materialIcons="using:SoftwareKobo.Icons.MaterialIcons"
       mc:Ignorable="d">
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <fontAwesome:FontAwesomeIcon Symbol="Youtube"></fontAwesome:FontAwesomeIcon>
+        <Pivot>
+            <PivotItem Header="FontAwesome">
+                <GridView x:Name="FontAwesomeGridView">
+                    <GridView.ItemTemplate>
+                        <DataTemplate>
+                            <fontAwesome:FontAwesomeIcon Symbol="{Binding}"></fontAwesome:FontAwesomeIcon>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+            </PivotItem>
+            <PivotItem Header="MaterialIcons">
+                <GridView x:Name="MaterialIconsGridView">
+                    <GridView.ItemTemplate>
+                        <DataTemplate>
+                            <materialIcons:MaterialIcon Symbol="{Binding}"></materialIcons:MaterialIcon>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+            </PivotItem>
+        </Pivot>
     </Grid>
 </Page>
