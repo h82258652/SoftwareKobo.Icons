@@ -22,7 +22,7 @@ namespace FontAwesomeSymbolGenerator
             var row = document.QuerySelector("div.container > div.row");
             var divs = row.Children.OfType<IHtmlDivElement>();
             StringBuilder builder = new StringBuilder();
-            builder.AppendLine("public enum Symbol");
+            builder.AppendLine("public enum FontAwesomeSymbol");
             builder.AppendLine("{");
 
             Dictionary<string, int> dic = new Dictionary<string, int>();
