@@ -27,6 +27,8 @@ namespace FontAwesomeSymbolGenerator
 
             Dictionary<string, int> dic = new Dictionary<string, int>();
 
+            Dictionary<string, int> dd = new Dictionary<string, int>();
+
             foreach (var htmlDivElement in divs)
             {
                 var name = string.Join("", htmlDivElement.ChildNodes.OfType<IText>().Select(temp => temp.Text)).Trim();
@@ -54,25 +56,48 @@ namespace FontAwesomeSymbolGenerator
                 }
                 name = new string(tempList);
                 name = name.Replace("-", "");
-                var span = htmlDivElement.Children.OfType<IHtmlSpanElement>().Last();
-                var value = span.TextContent;
-                value = value.Replace("[&#x", "0x");
-                value = value.Replace(";]", "");
-                var index = Convert.ToInt32(value, 16);
 
-                dic.Add(name, index);
+                if (htmlDivElement.TextContent.Contains("(alias)"))
+                {
+                    var span = htmlDivElement.Children.OfType<IHtmlSpanElement>().Last();
+                    var value = span.TextContent;
+                    value = value.Replace("[&#x", "0x");
+                    value = value.Replace(";]", "");
+                    var index = Convert.ToInt32(value, 16);
+
+                    dd.Add(name, index);
+                }
+                else
+                {
+                    var span = htmlDivElement.Children.OfType<IHtmlSpanElement>().Last();
+                    var value = span.TextContent;
+                    value = value.Replace("[&#x", "0x");
+                    value = value.Replace(";]", "");
+                    var index = Convert.ToInt32(value, 16);
+
+                    dic.Add(name, index);
+                }
 
                 //builder.AppendLine(name + " = " + value + ",");
             }
+
+            dd = dd.OrderBy(temp => temp.Value).ToDictionary(temp => temp.Key, temp => temp.Value);
 
             foreach (var temp in dic.OrderBy(temp => temp.Value))
             {
                 var name = temp.Key;
                 var value = "0x" + temp.Value.ToString("x");
                 builder.AppendLine(name + " = " + value + ",");
+
+                var ttf = dd.Where(temp2 => temp2.Value == temp.Value);
+                foreach (var keyValuePair in ttf)
+                {
+                    builder.AppendLine(keyValuePair.Key + "=" + name + ",");
+                }
             }
 
             builder.AppendLine("}");
+
             File.WriteAllText(@"symbol.txt", builder.ToString());
             Console.WriteLine("finish");
             Console.ReadKey();
