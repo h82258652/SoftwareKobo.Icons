@@ -6,6 +6,6 @@
 
         internal const string FontAwesomeFamilyName = "ms-appx:///SoftwareKobo.Icons/Assets/Fonts/FontAwesome_4.7.0.otf#FontAwesome";
 
-        internal const string MaterialIconsFamilyName = "ms-appx:///SoftwareKobo.Icons/Assets/Fonts/MaterialIcons-Regular.ttf#Material Icons";
+        internal const string MaterialIconsFamilyName = "ms-appx:///SoftwareKobo.Icons/Assets/Fonts/MaterialIcons-Regular_2.2.0.ttf#Material Icons";
     }
 }
