@@ -104,7 +104,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <Content Include="Assets\Fonts\FontAwesome.otf" />
+    <Content Include="Assets\Fonts\FontAwesome_4.7.0.otf" />
     <Content Include="Assets\Fonts\MaterialIcons-Regular.ttf" />
     <Content Include="Assets\Fonts\dashicons.ttf" />
     <None Include="project.json" />
