@@ -106,7 +106,7 @@
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <Content Include="Assets\Fonts\FontAwesome_4.7.0.otf" />
     <Content Include="Assets\Fonts\MaterialIcons-Regular_2.2.0.ttf" />
-    <Content Include="Assets\Fonts\dashicons.ttf" />
+    <Content Include="Assets\Fonts\dashicons_3.8.ttf" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>

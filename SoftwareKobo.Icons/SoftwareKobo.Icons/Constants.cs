@@ -2,7 +2,7 @@
 {
     internal static class Constants
     {
-        internal const string DashiconsFamilyName = "ms-appx:///SoftwareKobo.Icons/Assets/Fonts/dashicons.ttf#Dashicons";
+        internal const string DashiconsFamilyName = "ms-appx:///SoftwareKobo.Icons/Assets/Fonts/dashicons_3.8.ttf#Dashicons";
 
         internal const string FontAwesomeFamilyName = "ms-appx:///SoftwareKobo.Icons/Assets/Fonts/FontAwesome_4.7.0.otf#FontAwesome";
 
