@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftwareKobo.Icons", "SoftwareKobo.Icons\SoftwareKobo.Icons.csproj", "{B90104D0-C4C5-4DAB-BEC3-486100B3003D}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DashSymbolGenerator", "DashSymbolGenerator\DashSymbolGenerator.csproj", "{FC89C07C-D1CD-4F56-829C-1A03C84E625E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IconBrowser", "IconBrowser\IconBrowser.csproj", "{954BD0CD-3B17-4E01-83AD-3A32AB2E5BF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IconBrowser2", "IconBrowser2\IconBrowser2.csproj", "{94BCEA67-8E39-4969-B1A6-B203FD0E2A36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -133,6 +135,26 @@ Global
 		{954BD0CD-3B17-4E01-83AD-3A32AB2E5BF1}.Release|x86.ActiveCfg = Release|x86
 		{954BD0CD-3B17-4E01-83AD-3A32AB2E5BF1}.Release|x86.Build.0 = Release|x86
 		{954BD0CD-3B17-4E01-83AD-3A32AB2E5BF1}.Release|x86.Deploy.0 = Release|x86
+		{94BCEA67-8E39-4969-B1A6-B203FD0E2A36}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{94BCEA67-8E39-4969-B1A6-B203FD0E2A36}.Debug|ARM.ActiveCfg = Debug|ARM
+		{94BCEA67-8E39-4969-B1A6-B203FD0E2A36}.Debug|ARM.Build.0 = Debug|ARM
+		{94BCEA67-8E39-4969-B1A6-B203FD0E2A36}.Debug|ARM.Deploy.0 = Debug|ARM
+		{94BCEA67-8E39-4969-B1A6-B203FD0E2A36}.Debug|x64.ActiveCfg = Debug|x64
+		{94BCEA67-8E39-4969-B1A6-B203FD0E2A36}.Debug|x64.Build.0 = Debug|x64
+		{94BCEA67-8E39-4969-B1A6-B203FD0E2A36}.Debug|x64.Deploy.0 = Debug|x64
+		{94BCEA67-8E39-4969-B1A6-B203FD0E2A36}.Debug|x86.ActiveCfg = Debug|x86
+		{94BCEA67-8E39-4969-B1A6-B203FD0E2A36}.Debug|x86.Build.0 = Debug|x86
+		{94BCEA67-8E39-4969-B1A6-B203FD0E2A36}.Debug|x86.Deploy.0 = Debug|x86
+		{94BCEA67-8E39-4969-B1A6-B203FD0E2A36}.Release|Any CPU.ActiveCfg = Release|x86
+		{94BCEA67-8E39-4969-B1A6-B203FD0E2A36}.Release|ARM.ActiveCfg = Release|ARM
+		{94BCEA67-8E39-4969-B1A6-B203FD0E2A36}.Release|ARM.Build.0 = Release|ARM
+		{94BCEA67-8E39-4969-B1A6-B203FD0E2A36}.Release|ARM.Deploy.0 = Release|ARM
+		{94BCEA67-8E39-4969-B1A6-B203FD0E2A36}.Release|x64.ActiveCfg = Release|x64
+		{94BCEA67-8E39-4969-B1A6-B203FD0E2A36}.Release|x64.Build.0 = Release|x64
+		{94BCEA67-8E39-4969-B1A6-B203FD0E2A36}.Release|x64.Deploy.0 = Release|x64
+		{94BCEA67-8E39-4969-B1A6-B203FD0E2A36}.Release|x86.ActiveCfg = Release|x86
+		{94BCEA67-8E39-4969-B1A6-B203FD0E2A36}.Release|x86.Build.0 = Release|x86
+		{94BCEA67-8E39-4969-B1A6-B203FD0E2A36}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

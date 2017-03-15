@@ -1,0 +1,90 @@
+﻿<Page x:Class="IconBrowser2.Views.MainView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:converters="using:IconBrowser2.Converters"
+      xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      DataContext="{Binding Source={StaticResource Locator}, Path=Main}"
+      mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <converters:ItemClickEventArgsConverter x:Key="ItemClickEventArgsConverter" />
+            <converters:IconToXamlCodeConverter x:Key="IconToXamlCodeConverter" />
+            <converters:IconToElementConverter x:Key="IconToElementConverter" />
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBox Grid.Row="0"
+                 Text="{Binding Path=Query, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="200" />
+            </Grid.ColumnDefinitions>
+            <GridView Grid.Column="0"
+                      IsItemClickEnabled="True"
+                      ItemsSource="{Binding Path=Icons}"
+                      SelectionMode="None">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="ItemClick">
+                        <core:InvokeCommandAction Command="{Binding Path=IconClickCommand}"
+                                                  InputConverter="{StaticResource ItemClickEventArgsConverter}" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <ContentPresenter Grid.Row="0"
+                                              Content="{Binding Converter={StaticResource IconToElementConverter}}">
+                                <ContentPresenter.Foreground>
+                                    <SolidColorBrush Color="{ThemeResource SystemAccentColor}" />
+                                </ContentPresenter.Foreground>
+                            </ContentPresenter>
+                            <TextBlock Grid.Row="1"
+                                       Text="{Binding Path=Name}"
+                                       TextAlignment="Center"
+                                       TextWrapping="Wrap" />
+                        </Grid>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+                <GridView.ItemContainerStyle>
+                    <Style TargetType="GridViewItem">
+                        <Setter Property="HorizontalContentAlignment"
+                                Value="Stretch" />
+                        <Setter Property="VerticalContentAlignment"
+                                Value="Stretch" />
+                        <Setter Property="Width"
+                                Value="96" />
+                        <Setter Property="Height"
+                                Value="96" />
+                    </Style>
+                </GridView.ItemContainerStyle>
+            </GridView>
+            <ScrollViewer Grid.Column="1"
+                          HorizontalScrollBarVisibility="Disabled"
+                          VerticalScrollBarVisibility="Auto">
+                <StackPanel Orientation="Vertical">
+                    <ContentPresenter Content="{Binding Path=SelectedIcon, Converter={StaticResource IconToElementConverter}}">
+                        <ContentPresenter.Foreground>
+                            <SolidColorBrush Color="{ThemeResource SystemAccentColor}" />
+                        </ContentPresenter.Foreground>
+                    </ContentPresenter>
+                    <ContentPresenter Content="{Binding Path=SelectedIcon, Converter={StaticResource IconToXamlCodeConverter}}" />
+                    <Button HorizontalAlignment="Center"
+                            Command="{Binding Path=CopyCommand}"
+                            Content="Copy" />
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Page>
