@@ -237,6 +237,6 @@
         ThumbsDown = 0xf542,
         Move = 0xf545,
         Paperclip = 0xf546,
-        Laptop = 0xf547,
+        Laptop = 0xf547
     }
 }

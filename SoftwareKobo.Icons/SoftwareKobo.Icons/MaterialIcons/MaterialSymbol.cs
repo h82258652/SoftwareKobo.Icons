@@ -933,6 +933,6 @@
         RoomService = 0xEB49,
         SmokeFree = 0xEB4A,
         SmokingRooms = 0xEB4B,
-        Spa = 0xEB4C,
+        Spa = 0xEB4C
     }
 }

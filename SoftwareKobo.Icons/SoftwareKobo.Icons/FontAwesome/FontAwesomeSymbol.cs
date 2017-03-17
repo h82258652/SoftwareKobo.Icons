@@ -788,6 +788,6 @@
         SnowflakeOutline = 0xf2dc,
         Superpowers = 0xf2dd,
         Wpexplorer = 0xf2de,
-        Meetup = 0xf2e0,
+        Meetup = 0xf2e0
     }
 }

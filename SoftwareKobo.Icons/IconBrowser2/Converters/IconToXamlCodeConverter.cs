@@ -8,6 +8,7 @@ using Windows.UI.Xaml.Media;
 using IconBrowser2.Models;
 using SoftwareKobo.Icons.Dashicons;
 using SoftwareKobo.Icons.FontAwesome;
+using SoftwareKobo.Icons.Ionicons;
 using SoftwareKobo.Icons.MaterialIcons;
 
 namespace IconBrowser2.Converters
@@ -47,6 +48,10 @@ namespace IconBrowser2.Converters
             else if (icon.EnumType == typeof(DashSymbol))
             {
                 className = nameof(DashIcon);
+            }
+            else if (icon.EnumType == typeof(IonicSymbol))
+            {
+                className = nameof(IonicIcon);
             }
             else
             {

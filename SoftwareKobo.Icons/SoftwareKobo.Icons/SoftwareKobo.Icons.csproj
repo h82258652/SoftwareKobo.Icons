@@ -107,6 +107,7 @@
     <Content Include="Assets\Fonts\FontAwesome_4.7.0.otf" />
     <Content Include="Assets\Fonts\MaterialIcons-Regular_2.2.0.ttf" />
     <Content Include="Assets\Fonts\dashicons_3.8.ttf" />
+    <Content Include="Assets\Fonts\ionicons_2.1.0.ttf" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -115,6 +116,8 @@
     <Compile Include="Dashicons\DashSymbol.cs" />
     <Compile Include="FontAwesome\FontAwesomeIcon.cs" />
     <Compile Include="FontAwesome\FontAwesomeSymbol.cs" />
+    <Compile Include="Ionicons\IonicIcon.cs" />
+    <Compile Include="Ionicons\IonicSymbol.cs" />
     <Compile Include="MaterialIcons\MaterialIcon.cs" />
     <Compile Include="MaterialIcons\MaterialSymbol.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

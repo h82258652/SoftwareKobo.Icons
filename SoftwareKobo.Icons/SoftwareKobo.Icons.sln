@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IconBrowser", "IconBrowser\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IconBrowser2", "IconBrowser2\IconBrowser2.csproj", "{94BCEA67-8E39-4969-B1A6-B203FD0E2A36}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IonicSymbolGenerator", "IonicSymbolGenerator\IonicSymbolGenerator.csproj", "{9B399400-6493-40B3-B75D-F07A29C03FAB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -155,6 +157,22 @@ Global
 		{94BCEA67-8E39-4969-B1A6-B203FD0E2A36}.Release|x86.ActiveCfg = Release|x86
 		{94BCEA67-8E39-4969-B1A6-B203FD0E2A36}.Release|x86.Build.0 = Release|x86
 		{94BCEA67-8E39-4969-B1A6-B203FD0E2A36}.Release|x86.Deploy.0 = Release|x86
+		{9B399400-6493-40B3-B75D-F07A29C03FAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B399400-6493-40B3-B75D-F07A29C03FAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B399400-6493-40B3-B75D-F07A29C03FAB}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{9B399400-6493-40B3-B75D-F07A29C03FAB}.Debug|ARM.Build.0 = Debug|Any CPU
+		{9B399400-6493-40B3-B75D-F07A29C03FAB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9B399400-6493-40B3-B75D-F07A29C03FAB}.Debug|x64.Build.0 = Debug|Any CPU
+		{9B399400-6493-40B3-B75D-F07A29C03FAB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9B399400-6493-40B3-B75D-F07A29C03FAB}.Debug|x86.Build.0 = Debug|Any CPU
+		{9B399400-6493-40B3-B75D-F07A29C03FAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B399400-6493-40B3-B75D-F07A29C03FAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B399400-6493-40B3-B75D-F07A29C03FAB}.Release|ARM.ActiveCfg = Release|Any CPU
+		{9B399400-6493-40B3-B75D-F07A29C03FAB}.Release|ARM.Build.0 = Release|Any CPU
+		{9B399400-6493-40B3-B75D-F07A29C03FAB}.Release|x64.ActiveCfg = Release|Any CPU
+		{9B399400-6493-40B3-B75D-F07A29C03FAB}.Release|x64.Build.0 = Release|Any CPU
+		{9B399400-6493-40B3-B75D-F07A29C03FAB}.Release|x86.ActiveCfg = Release|Any CPU
+		{9B399400-6493-40B3-B75D-F07A29C03FAB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

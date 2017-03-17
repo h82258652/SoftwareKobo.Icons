@@ -9,6 +9,7 @@ using IconBrowser2.Models;
 using IconBrowser2.Services;
 using SoftwareKobo.Icons.Dashicons;
 using SoftwareKobo.Icons.FontAwesome;
+using SoftwareKobo.Icons.Ionicons;
 using SoftwareKobo.Icons.MaterialIcons;
 
 namespace IconBrowser2.ViewModels
@@ -52,6 +53,11 @@ namespace IconBrowser2.ViewModels
                 EnumType = typeof(DashSymbol),
                 Name = temp
             }));
+            allIcons.AddRange(Enum.GetNames(typeof(IonicSymbol)).Select(temp => new Icon()
+            {
+                EnumType = typeof(IonicSymbol),
+                Name = temp
+            }));
             _allIcons = allIcons;
         }
 
@@ -86,6 +92,10 @@ namespace IconBrowser2.ViewModels
                     else if (icon.EnumType == typeof(DashSymbol))
                     {
                         className = nameof(DashIcon);
+                    }
+                    else if (icon.EnumType == typeof(IonicSymbol))
+                    {
+                        className = nameof(IonicSymbol);
                     }
                     else
                     {

@@ -4,6 +4,7 @@ using Windows.UI.Xaml.Data;
 using IconBrowser2.Models;
 using SoftwareKobo.Icons.Dashicons;
 using SoftwareKobo.Icons.FontAwesome;
+using SoftwareKobo.Icons.Ionicons;
 using SoftwareKobo.Icons.MaterialIcons;
 
 namespace IconBrowser2.Converters
@@ -34,6 +35,10 @@ namespace IconBrowser2.Converters
             else if (icon.EnumType == typeof(DashSymbol))
             {
                 return new DashIcon((DashSymbol)symbol);
+            }
+            else if (icon.EnumType == typeof(IonicSymbol))
+            {
+                return new IonicIcon((IonicSymbol)symbol);
             }
             else
             {
