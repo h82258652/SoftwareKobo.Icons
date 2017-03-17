@@ -2,6 +2,6 @@
 {
     public interface IClipboardService
     {
-        void SetRawHtml(string html);
+        void SetHtml(string text, string html);
     }
 }

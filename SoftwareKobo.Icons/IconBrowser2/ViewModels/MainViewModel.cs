@@ -77,8 +77,10 @@ namespace IconBrowser2.ViewModels
                         return;
                     }
 
+                    var text = new StringBuilder();
                     var html = new StringBuilder();
                     html.Append("<div>");
+                    text.Append("<");
                     html.Append("<span style=\"color:blue;\">&lt;</span>");
                     string className;
                     if (icon.EnumType == typeof(Symbol))
@@ -105,11 +107,14 @@ namespace IconBrowser2.ViewModels
                     {
                         throw new ArgumentOutOfRangeException(nameof(icon.EnumType));
                     }
+                    text.Append(className);
                     html.Append("<span style=\"color:#a31515;\">" + className + "</span>");
+                    text.Append(" Symbol");
                     html.Append("<span style=\"color:red;\">&nbsp;Symbol</span>");
+                    text.Append("=\"" + icon + "\" />");
                     html.Append("<span style=\"color:blue;\">=&quot;" + icon.Name + "&quot; /&gt;</span>");
                     html.Append("</div>");
-                    _clipboardService.SetRawHtml(html.ToString());
+                    _clipboardService.SetHtml(text.ToString(), html.ToString());
                 }, () => SelectedIcon != null);
                 return _copyCommand;
             }
