@@ -20,6 +20,7 @@ namespace IconBrowser2.Services
             content.SetText(text);
             content.SetHtmlFormat(HtmlFormatHelper.CreateHtmlFormat(html));
             Clipboard.SetContent(content);
+            Clipboard.Flush();
         }
     }
 }
