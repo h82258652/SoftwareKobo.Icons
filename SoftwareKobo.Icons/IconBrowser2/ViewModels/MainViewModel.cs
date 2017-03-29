@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Windows.UI.Core;
-using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
@@ -23,8 +21,6 @@ namespace IconBrowser2.ViewModels
         private readonly IClipboardService _clipboardService;
 
         private RelayCommand _copyCommand;
-
-        private DispatcherTimer _delayTimer;
 
         private RelayCommand<Icon> _iconClickCommand;
 
@@ -132,7 +128,7 @@ namespace IconBrowser2.ViewModels
             }
         }
 
-        public IReadOnlyList<Icon> Icons
+        public IEnumerable<Icon> Icons
         {
             get
             {
@@ -142,7 +138,7 @@ namespace IconBrowser2.ViewModels
                 }
                 else
                 {
-                    return _allIcons.Where(temp => temp.Name.IndexOf(Query, StringComparison.OrdinalIgnoreCase) > -1).ToList();
+                    return _allIcons.Where(temp => temp.Name.IndexOf(Query, StringComparison.OrdinalIgnoreCase) > -1);
                 }
             }
         }
@@ -158,21 +154,7 @@ namespace IconBrowser2.ViewModels
                 if (_query != value)
                 {
                     Set(ref _query, value);
-
-                    _delayTimer?.Stop();
-                    _delayTimer = new DispatcherTimer()
-                    {
-                        Interval = TimeSpan.FromSeconds(0.25)
-                    };
-                    _delayTimer.Tick += async (sender, e) =>
-                    {
-                        (sender as DispatcherTimer)?.Stop();
-                        await Window.Current.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
-                        {
-                            RaisePropertyChanged(nameof(Icons));
-                        });
-                    };
-                    _delayTimer.Start();
+                    RaisePropertyChanged(nameof(Icons));
                 }
             }
         }
