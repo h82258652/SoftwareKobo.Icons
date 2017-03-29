@@ -111,7 +111,7 @@ namespace IconBrowser2.ViewModels
                     html.Append("<span style=\"color:#a31515;\">" + className + "</span>");
                     text.Append(" Symbol");
                     html.Append("<span style=\"color:red;\">&nbsp;Symbol</span>");
-                    text.Append("=\"" + icon + "\" />");
+                    text.Append("=\"" + icon.Name + "\" />");
                     html.Append("<span style=\"color:blue;\">=&quot;" + icon.Name + "&quot; /&gt;</span>");
                     html.Append("</div>");
                     _clipboardService.SetHtml(text.ToString(), html.ToString());
